@@ -1,0 +1,126 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="TelemedicsAdminWebApp.Admin" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>:: Telemedics Admin Panel ::</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.6 -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  
+  <!-- Admin style -->
+  <link rel="stylesheet" href="css/admin.css">
+  
+  <!-- Custom style -->
+  <link rel="stylesheet" href="css/site.css">
+         <link rel="stylesheet" type="text/css" href="css/datepicker.css">
+</head>
+<body class="sidebar-mini">
+<form id="AdminForm" runat="server">
+<div class="wrapper">
+
+  <header class="main-header">
+
+    <!-- Logo -->
+    <a href="PortalHome.aspx" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><img src="img/telemedics_logo.png" alt="Telemedics"></span>
+    <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><img src="img/logo.png" alt="Telemedics"></span>
+    </a>
+
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+      <!-- Navbar Right Menu -->
+     
+     
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav navbar-right">			
+         <li>
+                  <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+					  <i class="fa fa-user"></i> Application Manager  <span class=" fa fa-angle-down"></span>
+                  </a>
+                  <ul class="dropdown-menu">
+                        <li>
+                            <a href="ViewProfile.aspx"><i class="fa fa-fw fa-user"></i> Profile</a>
+                        </li>
+                         <li class="divider"></li>                         
+                        <li>
+                            <a href="Logout.aspx"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                        </li>
+                    </ul>
+                </li>             
+        </ul>       
+      </div>
+
+    </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">    
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu">
+        <li class="header">ADMIN MENU</li>
+		  <li class="treeview active"><a href="Dashboard.aspx"><i class="fa fa-picture-o"></i><span>Dashboard</span></a></li> 
+		  
+          <li class="treeview"><a href="DoctorRegistrations.aspx"><i class="fa fa-picture-o"></i><span>Approve Registrations</span></a></li> 
+		  
+           <li class="treeview"><a href="SearchAppointments.aspx"><i class="fa fa-user"></i><span>Search Appointments</span></a></li> 
+		    
+              <li class="treeview ">
+              <a href="#">
+              <i class="fa fa-list"></i><span> Reports</span>
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+               <li><a href="PatientRegistrationReport.aspx"><i class="fa fa-circle-o"></i>Patient Registrations </a></li>
+                <li><a href="DoctorRegistrationReport.aspx"><i class="fa fa-circle-o"></i>Doctor Registrations</a></li>
+                  <li><a href="HerbalRegistrationReport.aspx"><i class="fa fa-circle-o"></i>Herbal Professionals Registrations</a></li>
+              </ul>
+            </li>
+          <li class="treeview"><a href="Logout.aspx"><i class="fa fa-power-off"></i><span>Log Out</span></a></li> 
+      </ul>
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    <footer class="main-footer">
+    <div class="pull-right hidden-xs">
+      
+    </div>
+    <strong>Copyright © 2019 <a href="PortalHome.aspx">Telemedics  </a>.</strong>  All rights reserved.
+  </footer>  
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 2.2.3 -->
+<script src="js/jquery-2.2.3.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="js/bootstrap.min.js"></script>
+<!-- App -->
+<script src="js/app.min.js"></script>
+<!-- Sparkline -->
+<script src="js/jquery.slimscroll.min.js"></script>
+</form>
+</body>
+</html>
+
